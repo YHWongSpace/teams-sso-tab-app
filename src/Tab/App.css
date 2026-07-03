@@ -3,48 +3,66 @@
   background: #f8fafc;
   color: #0f172a;
   padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: Arial, sans-serif;
 }
 
-.card {
+.container {
   width: 100%;
-  max-width: 850px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+  margin-bottom: 20px;
 }
 
-.header {
+.hero {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
   align-items: flex-start;
+  gap: 20px;
 }
 
-.label {
+.label,
+.sectionLabel {
   color: #4f46e5;
   font-weight: 700;
-  font-size: 14px;
-  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
 }
 
 h1 {
-  margin: 8px 0;
-  font-size: 30px;
+  margin: 0 0 12px;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
 }
 
 .description {
   color: #475569;
   margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .badge {
-  padding: 8px 12px;
+  padding: 9px 14px;
   border-radius: 999px;
   font-weight: 700;
   font-size: 14px;
@@ -66,17 +84,15 @@ h1 {
   color: #92400e;
 }
 
-.grid {
+.grid,
+.twoColumn {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 24px;
+  gap: 20px;
 }
 
 .panel {
-  background: #f1f5f9;
-  border-radius: 16px;
-  padding: 18px;
+  margin-bottom: 20px;
 }
 
 .userPanel {
@@ -94,11 +110,12 @@ h1 {
 
 .panelValue {
   font-weight: 700;
-  margin-top: 10px;
+  margin: 10px 0 0;
+  line-height: 1.4;
 }
 
 .userName {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   margin: 10px 0 0;
 }
@@ -106,17 +123,72 @@ h1 {
 .small {
   font-size: 13px;
   color: #64748b;
+  line-height: 1.5;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flowStep {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.flowStep span {
+  width: 36px;
+  height: 36px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.flowStep p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+code {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 0.92em;
+}
+
+.codeBlock {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .message {
-  margin-top: 24px;
-  border-radius: 16px;
-  padding: 18px;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
 }
 
 .messageTitle {
-  font-weight: 700;
-  margin: 0 0 8px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  font-size: 18px;
 }
 
 .errorBox {
@@ -131,8 +203,17 @@ h1 {
   color: #166534;
 }
 
-button {
+.errorBox ul {
   margin-top: 12px;
+  padding-left: 22px;
+}
+
+.errorBox li {
+  margin-bottom: 8px;
+}
+
+button {
+  margin-top: 14px;
   background: #dc2626;
   color: white;
   border: none;
@@ -142,31 +223,67 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: #b91c1c;
+}
+
 .token {
   word-break: break-all;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 12px;
+  border-radius: 12px;
   font-size: 14px;
 }
 
 .claimsBox {
-  background: #0f172a;
+  background: #111827;
   color: #f8fafc;
-  border-radius: 16px;
-  margin-top: 24px;
-  padding: 18px;
-  overflow-x: auto;
 }
 
-pre {
+.claimsBox .sectionLabel {
+  color: #a5b4fc;
+}
+
+.claimsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.claimsGrid div {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 14px;
+  padding: 14px;
+  overflow-wrap: anywhere;
+}
+
+.claimLabel {
+  margin: 0 0 6px;
   font-size: 12px;
-  white-space: pre-wrap;
+  color: #cbd5e1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-@media (max-width: 700px) {
-  .header {
+.claimsGrid p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .hero {
     flex-direction: column;
   }
 
-  .grid {
+  .grid,
+  .twoColumn,
+  .claimsGrid {
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
   }
 }
