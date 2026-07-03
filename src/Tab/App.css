@@ -1,0 +1,172 @@
+.page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 850px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.label {
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.description {
+  color: #475569;
+  margin: 0;
+}
+
+.badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.badge.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.loading {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.panel {
+  background: #f1f5f9;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.userPanel {
+  background: #eef2ff;
+}
+
+.panelTitle {
+  text-transform: uppercase;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.panelValue {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.userName {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
+.small {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.message {
+  margin-top: 24px;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.messageTitle {
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.errorBox {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.successBox {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+button {
+  margin-top: 12px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.token {
+  word-break: break-all;
+  font-size: 14px;
+}
+
+.claimsBox {
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 16px;
+  margin-top: 24px;
+  padding: 18px;
+  overflow-x: auto;
+}
+
+pre {
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
